@@ -48,9 +48,9 @@
       workArray[2] = Math.floor(workTime % 60).toString().padStart(2, "0");
       workClock.innerText = workArray.join(":");
 
-      if (!(workTime % 30) && workTime) { // every 5 mins, gift 1
+      if (!(workTime % 300) && workTime) { // every 5 mins, gift 1
         playTime += 60;
-        if (!(workTime % 60)) { // every 100 mins, gift 20
+        if (!(workTime % 6000)) { // every 100 mins, gift 20
           playTime += 1200;
         }
         doPlay();
